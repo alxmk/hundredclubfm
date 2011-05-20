@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = "Welcome to the FM 100-Club Generator!"
+      sign_in @user
       redirect_to root_path
     else
       @title = "Sign up"

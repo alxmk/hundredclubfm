@@ -7,7 +7,13 @@
 			<td class="menubar">
 				<nav class="round">
 					<ul>
-						<li><%= link_to "Home", root_path%></li>
+						<li><%= link_to "Home", root_path %></li>
+						<% if !signed_in? %>
+							<li><%= link_to "Sign up", signup_path %></li>
+							<li><%= link_to "Sign in", signin_path %></li>
+						<% else %>
+							<li><%= link_to "Sign out", signout_path %></li>
+						<% end %>
 					</ul>
 				</nav>
 			</td>
