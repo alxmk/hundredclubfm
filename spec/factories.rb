@@ -9,3 +9,9 @@ end
 Factory.sequence :email do |n|
   "person-#{n}@example.com"
 end
+
+Factory.define :savegame do |savegame|
+  savegame.name               "Save Name"
+  savegame.description        "A save game"
+  savegame.user_id            1
+end

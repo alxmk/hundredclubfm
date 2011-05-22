@@ -1,0 +1,11 @@
+<h1>All My Saves</h1>
+
+<ul class="savegames">
+	<% if @savegames.empty? %>
+		<p>You don't have a save yet!</p>
+	<% else %>
+		<%= render @savegames %>
+	<% end %>
+</ul>
+
+<%= link_to "Create a New Save", new_savegame_path %>

@@ -1,8 +1,7 @@
 Hundredclubfm::Application.routes.draw do
-  get "sessions/new"
-
-  resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
+  resources :users,     :only => [:new, :create]
+  resources :sessions,  :only => [:new, :create, :destroy]
+  resources :savegames
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'

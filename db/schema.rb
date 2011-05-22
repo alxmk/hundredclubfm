@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520120533) do
+ActiveRecord::Schema.define(:version => 20110520143302) do
+
+  create_table "savegames", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "savegames", ["user_id"], :name => "index_savegames_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

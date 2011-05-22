@@ -1,0 +1,2 @@
+module SavegamesHelper
+end

@@ -1,0 +1,16 @@
+<li>
+	<table>
+		<tr>
+			<td class="savename">
+				<h3><%= link_to savegame.name, savegame %></h3>
+				<%= savegame.description %>
+			</td>
+			<td class="savemodifiers">
+				<%= link_to "delete", savegame, :method => :delete,
+												:confirm => "Are you sure?",
+												:title => "Delete #{savegame.name}" %>
+				<%= link_to "edit", edit_savegame_path(savegame) %>
+			</td>
+		</tr>
+	</table>
+</li>

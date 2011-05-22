@@ -69,3 +69,23 @@ section {
 	padding: 20px;
 	font-size: 120%;
 }
+
+/* Savegame index */
+ul.savegames {
+	margin-top: 1em;
+}
+
+.savegames li {
+	list-style: none;
+	margin-top: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+.savegames li table tr td.savename {
+	width: 80%;
+}
+
+.savegames li table tr td.savemodifiers {
+	width: 20%;
+	text-align: center;
+}
